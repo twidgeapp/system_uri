@@ -30,13 +30,11 @@
     warnings
 )]
 #![deny(
-    bad_style,
     deprecated,
     improper_ctypes,
     missing_docs,
     non_shorthand_field_patterns,
     overflowing_literals,
-    plugin_as_library,
     stable_features,
     unconditional_recursion,
     unknown_lints,
@@ -85,7 +83,7 @@ mod errors {
     use std::io;
     use std::str::Utf8Error;
 
-    quick_error! {
+    quick_error::quick_error! {
         /// System URI error variants.
         #[derive(Debug)]
         pub enum Error {
